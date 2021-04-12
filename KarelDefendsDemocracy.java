@@ -11,13 +11,13 @@ public void run() {
     }
 }
 private void checkMiddleBeeper() {
-    if (beepersPresent()) {
+    if (beeperPresent()) {
         move();
         move();
     }
 }
 private void pickAllBeepers() {
-    if (noBeepersPresent()) {
+    if (noBeeperPresent()) {
         checkBeepersDown();
         checkBeepersUp();
     }
@@ -25,7 +25,7 @@ private void pickAllBeepers() {
 private void checkBeepersDown() {
     turnRight();
     move();
-    while (beepersPresent()) {
+    while (beeperPresent()) {
         pickBeeper();
     }
     turnAround();
@@ -35,7 +35,7 @@ private void checkBeepersDown() {
     if (frontIsClear()) {
         move();
     }
-    while (beepersPresent()) {
+    while (beeperPresent()) {
         pickBeeper();
     }
     turnAround();
